@@ -1,10 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import styles from './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./page/App";
 
-const App = () => <h1 className={styles.main_title}>'Hello world'</h1>;
+import "./index.css";
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
