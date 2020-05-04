@@ -10,7 +10,8 @@
     "lint:fix": "eslint --fix --ext js,jsx ./",
     "watch:client": "webpack --watch --config client/webpack/webpack.dev.js",
     "watch:server": "nodemon -r dotenv/config ./server",
-    "start:all": "npm-run-all --parallel watch:client watch:server"
+    "start:all": "npm-run-all --parallel watch:client watch:server",
+    "start:prod": "npm run start:dev & node -r dotenv/config ./server"
   },
   "husky": {
     "hooks": {

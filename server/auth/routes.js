@@ -4,12 +4,13 @@ const queryString = require("query-string");
 
 const clientId = process.env.CLIENT_ID;
 const clientSecret = process.env.CLIENT_SECRET;
+const baseUrl = process.env.BASE_URL;
 
 const authRouter = express.Router();
 
 authRouter.get("/", (req, res) => {
   res.redirect(
-    `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=http://localhost:5000/api/auth/continue`
+    `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${baseUrl}/api/auth/continue`
   );
 });
 

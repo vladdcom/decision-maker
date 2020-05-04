@@ -17,7 +17,7 @@ userInfoRouter.get("/", (req, res) => {
     .then(response => {
       res.send(response.data);
     })
-    .catch(() => res.sendStatus(401));
+    .catch(() => res.sendStatus(400));
 });
 
 module.exports = userInfoRouter;

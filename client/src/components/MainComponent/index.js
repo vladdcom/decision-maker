@@ -7,13 +7,7 @@ const MainComponent = () => {
   const isUserAuthenticated = useSelector(selectAuthState);
 
   return (
-    <>
-      {isUserAuthenticated ? (
-        <Dashboard />
-      ) : (
-        <a href="http://localhost:5000/api/auth">Войти</a>
-      )}
-    </>
+    <>{isUserAuthenticated ? <Dashboard /> : <a href="api/auth">Войти</a>}</>
   );
 };
 

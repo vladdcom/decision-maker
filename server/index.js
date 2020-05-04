@@ -21,6 +21,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "..", "dist"));
 });
 
+// catch unhandled routes
+app.get("*", (req, res) => {
+  res.redirect("/");
+});
+
 app.listen(PORT, () => {
   // eslint-disable-next-line no-console
   console.log("server start");
